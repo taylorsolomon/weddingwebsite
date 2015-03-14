@@ -1,0 +1,25 @@
+@import 'normalize';
+@import 'mixins';
+@import 'settings';
+@import 'type';
+@import 'fonts';
+
+html, body, .push-contain {
+  // For Backstretch effect.
+  height:100%;
+}
+
+body {
+  background: #fff;
+  position:relative;
+}
+
+img {
+  max-width:100%;
+  height:auto;
+}
+
+
+.shrinkwrap {
+  @include outer-container;
+}

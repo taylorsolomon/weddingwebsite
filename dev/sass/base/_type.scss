@@ -1,0 +1,37 @@
+body {
+  font-family: "Lato";
+
+}
+
+p { line-height: 1.5;
+    margin: 0 0 1em;    }
+
+h1 {
+  transition: all 0.2s ease-in-out;
+  font-size: 2em;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+address {
+  font-style: normal;
+  padding: 10px;
+
+}
+
+.vcard {
+  .org {
+    padding-bottom: 10px;
+    font-weight: 700;
+  }
+  .adr {
+    padding-bottom: 10px;
+    font-size: 0.8em;
+  }
+}

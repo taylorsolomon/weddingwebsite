@@ -1,0 +1,15 @@
+
+// Colors
+// $navy  : #080716;
+// $pink  : #EBC8CF;
+
+$navy  : #112442;
+$pink  : #FE7193;
+$pink-light: #FFDCDC;
+
+
+
+// Breakpoints
+$mobile: new-breakpoint( max-width 567px );
+$tablet: new-breakpoint( min-width 568px );
+$desktop: new-breakpoint( min-width 1000px );
