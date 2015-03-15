@@ -1,0 +1,151 @@
+#sub-hero {
+  position: relative;
+  height: 320px;
+
+  @include media($tablet) {
+    height: 500px;
+  }
+  @include media($desktop) {
+    height: 650px;
+  }
+
+  h1 {
+    font-size: 3em;
+    bottom:10%;
+    display:block;
+    position:absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Lato';
+    font-weight:200;
+    color: #fff;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.3);
+
+    @include media($tablet) {
+      bottom:40%;
+    }
+    @include media($desktop) {
+      bottom: 20%;
+    }
+
+  }
+}
+
+body.about #sub-hero {
+  background: url(../images/hero-about.jpg) 50% 0 no-repeat;
+  background-size:cover;
+}
+body.party #sub-hero {
+  background:$pink;
+}
+
+body.event #sub-hero {
+  background: url(../images/hero-event.jpg) 50% no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+}
+body.guests #sub-hero {
+  background: url(../images/hero-guests.jpg) 50% no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+}
+body.registries #sub-hero {
+  background: url(../images/hero-registries.jpg) 50% no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+}
+
+
+
+// Panels. This section is complex.
+.panel {
+  background: #fff;
+  padding: 30px 0;
+
+  .shrinkwrap{
+    padding: 0 1.5em;
+  }
+
+  h2 {
+    display:block;
+    text-align:center;
+    //text-transform: uppercase;
+    //letter-spacing: 0.1em;
+    //word-spacing: 0.5em;
+  }
+
+  // .left, .right {
+  //   padding: 0 20px;
+  // }
+  aside {
+    text-align: center;
+  }
+
+  &.pink {
+    background: $pink-light;
+    color: $navy;
+  }
+
+  &.navy {
+    color:#fff;
+    background: $navy;
+  }
+
+  @include media($tablet) {
+    padding: 60px 0 80px;
+
+    aside {
+      @include span-columns(8);
+      @include shift(2);
+    }
+
+    article {
+      @include span-columns(10);
+      @include shift(1);
+    }
+
+  }
+
+  @include media($desktop) {
+    height: 70px 0 90px;
+
+    .shrinkwrap {
+      @include pad(0 default);
+    }
+
+    aside {
+      @include span-columns(6);
+      @include shift(0);
+      @include pad(0 default 0 0);
+    }
+
+    article {
+      @include span-columns(6);
+      @include shift(0);
+      @include omega;
+      @include pad(0 0 0 default);
+    }
+
+    &.reverse {
+      aside {
+        @include span-columns(6);
+        @include shift(6);
+        @include pad(0 0 0 default);
+      }
+
+      article {
+        @include span-columns(6);
+        @include shift(-12);
+        @include pad(0 default 0 0);
+
+      }
+    }
+
+  }
+
+}
+
+

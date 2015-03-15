@@ -1,0 +1,70 @@
+// .person img {
+//   // width:200px;
+//   // height:200px;
+//   display:block;
+// }
+
+
+#party-teaser {
+
+  .person {
+    img {
+      display:none;
+      transform: scale(1);
+      transition:transform 0.1s ease-in;
+    }
+
+    a {
+      &:focus, &:active {
+        outline: 0;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+          //top:-10px;
+        }
+      }
+    }
+  }
+
+  @include media($desktop) {
+    padding: 10em 2em 0 ;
+    max-width: em(1000);
+    margin:0 auto;
+
+    .person {
+      @include span-columns(2);
+      img {
+        display:inline;
+      }
+    }
+
+    .girls { // 6 she-dudes
+      @include row;
+      .person {
+        @include span-columns(2 of 14);
+        &:first-child {
+          @include shift(1);
+        }
+      }
+    }
+
+    .boys { // 7 bros
+      @include row;
+      .person {
+        @include span-columns(2 of 14);
+      }
+    }
+
+  }
+
+}
+
+
+body.party .panel {
+
+
+}
+
+
