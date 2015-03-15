@@ -6,10 +6,11 @@
 
 
 #party-teaser {
+  padding: 5em 0.5em 0 ;
 
   .person {
+    @include span-columns(2);
     img {
-      display:none;
       transform: scale(1);
       transition:transform 0.1s ease-in;
     }
@@ -22,25 +23,36 @@
       &:hover {
         img {
           transform: scale(1.1);
-          //top:-10px;
         }
       }
     }
   }
 
-  @include media($desktop) {
-    padding: 10em 2em 0 ;
-    max-width: em(1000);
-    margin:0 auto;
 
+
+  .girls {
+    // 6 she-dudes, but we render as if 7
+    // and offset by 1 so they look right
+    @include row;
     .person {
-      @include span-columns(2);
-      img {
-        display:inline;
+      @include span-columns(2 of 14);
+      &:first-child {
+        @include shift;
       }
     }
+  }
 
-    .girls { // 6 she-dudes
+  .boys { // 7 bros
+    @include row;
+    .person {
+      @include span-columns(2 of 14);
+    }
+  }
+
+
+  @include media($tablet) {
+    padding: 10em 2em 0;
+    .girls {
       @include row;
       .person {
         @include span-columns(2 of 14);
@@ -59,10 +71,92 @@
 
   }
 
+  @include media($desktop) {
+    max-width: em(1000);
+    margin:0 auto;
+
+    .person {
+      @include span-columns(2);
+      img {
+      }
+    }
+
+
+  }
+
 }
 
 
 body.party .panel {
+
+  .person {
+    @include row;
+    padding: 20px 0 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    &:last-child {
+      border-bottom: none;
+    }
+
+    img {
+      display: block;
+      margin:0 auto;
+    }
+
+    .name {
+      display:block;
+      font-size: rem(20);
+    }
+
+    .duty {
+      display:block;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #777;
+      padding-bottom: rem(10);
+    }
+
+    @include media($tablet) {
+      padding: 30px 0 30px;
+      border-bottom: none;
+      aside {
+        @include span-columns(4);
+        @include shift(0);
+      }
+      article {
+        @include span-columns(8);
+        @include shift(0);
+        margin-top: 40px;
+      }
+    }
+
+    @include media(min-width 800px) {
+      padding: 40px 0 40px;
+      aside {
+        @include span-columns(3);
+        @include shift(1);
+      }
+      article {
+        @include span-columns(7);
+      }
+    }
+
+    @include media($desktop) {
+      @include span-columns(6);
+      &:nth-child(even) {
+        @include omega;
+      }
+      aside {
+        @include span-columns(10);
+        @include shift(1);
+      }
+      article {
+        @include span-columns(10);
+        @include shift(1);
+        margin-top:0;
+      }
+    }
+
+  }
 
 
 }

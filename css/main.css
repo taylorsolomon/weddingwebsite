@@ -567,6 +567,8 @@ body.about #sub-hero {
 
 body.party #sub-hero {
   background: #FE7193; }
+  body.party #sub-hero h1 {
+    bottom: 10%; }
 
 body.event #sub-hero {
   background: url(../images/hero-event.jpg) 50% no-repeat;
@@ -661,57 +663,181 @@ body.registries #sub-hero {
         .panel.reverse article:last-child {
           margin-right: 0; } }
 
-#party-teaser .person img {
-  display: none;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  transition: -webkit-transform 0.1s ease-in;
-  transition: transform 0.1s ease-in; }
-#party-teaser .person a:focus, #party-teaser .person a:active {
-  outline: 0; }
-#party-teaser .person a:hover img {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1); }
-@media screen and (min-width: 1000px)  {
-  #party-teaser {
-    padding: 10em 2em 0;
-    max-width: 62.5em;
+#party-teaser {
+  padding: 5em 0.5em 0; }
+  #party-teaser .person {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%; }
+    #party-teaser .person:last-child {
+      margin-right: 0; }
+    #party-teaser .person img {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      transition: -webkit-transform 0.1s ease-in;
+      transition: transform 0.1s ease-in; }
+    #party-teaser .person a:focus, #party-teaser .person a:active {
+      outline: 0; }
+    #party-teaser .person a:hover img {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); }
+  #party-teaser .girls {
+    display: block; }
+    #party-teaser .girls::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #party-teaser .girls .person {
+      float: left;
+      display: block;
+      margin-right: 2.01406%;
+      width: 12.55938%; }
+      #party-teaser .girls .person:last-child {
+        margin-right: 0; }
+      #party-teaser .girls .person:first-child {
+        margin-left: 7.28672%; }
+  #party-teaser .boys {
+    display: block; }
+    #party-teaser .boys::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #party-teaser .boys .person {
+      float: left;
+      display: block;
+      margin-right: 2.01406%;
+      width: 12.55938%; }
+      #party-teaser .boys .person:last-child {
+        margin-right: 0; }
+  @media screen and (min-width: 568px)  {
+    #party-teaser {
+      padding: 10em 2em 0; }
+      #party-teaser .girls {
+        display: block; }
+        #party-teaser .girls::after {
+          clear: both;
+          content: "";
+          display: table; }
+        #party-teaser .girls .person {
+          float: left;
+          display: block;
+          margin-right: 2.01406%;
+          width: 12.55938%; }
+          #party-teaser .girls .person:last-child {
+            margin-right: 0; }
+          #party-teaser .girls .person:first-child {
+            margin-left: 7.28672%; }
+      #party-teaser .boys {
+        display: block; }
+        #party-teaser .boys::after {
+          clear: both;
+          content: "";
+          display: table; }
+        #party-teaser .boys .person {
+          float: left;
+          display: block;
+          margin-right: 2.01406%;
+          width: 12.55938%; }
+          #party-teaser .boys .person:last-child {
+            margin-right: 0; } }
+  @media screen and (min-width: 1000px)  {
+    #party-teaser {
+      max-width: 62.5em;
+      margin: 0 auto; }
+      #party-teaser .person {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 14.70196%; }
+        #party-teaser .person:last-child {
+          margin-right: 0; } }
+
+body.party .panel .person {
+  display: block;
+  padding: 20px 0 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  body.party .panel .person::after {
+    clear: both;
+    content: "";
+    display: table; }
+  body.party .panel .person:last-child {
+    border-bottom: none; }
+  body.party .panel .person img {
+    display: block;
     margin: 0 auto; }
-    #party-teaser .person {
+  body.party .panel .person .name {
+    display: block;
+    font-size: 1.25rem; }
+  body.party .panel .person .duty {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #777;
+    padding-bottom: 0.625rem; }
+  @media screen and (min-width: 568px)  {
+    body.party .panel .person {
+      padding: 30px 0 30px;
+      border-bottom: none; }
+      body.party .panel .person aside {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        margin-left: 0%; }
+        body.party .panel .person aside:last-child {
+          margin-right: 0; }
+      body.party .panel .person article {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%;
+        margin-left: 0%;
+        margin-top: 40px; }
+        body.party .panel .person article:last-child {
+          margin-right: 0; } }
+  @media screen and (min-width: 800px)  {
+    body.party .panel .person {
+      padding: 40px 0 40px; }
+      body.party .panel .person aside {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%;
+        margin-left: 8.5298%; }
+        body.party .panel .person aside:last-child {
+          margin-right: 0; }
+      body.party .panel .person article {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 57.35098%; }
+        body.party .panel .person article:last-child {
+          margin-right: 0; } }
+  @media screen and (min-width: 1000px)  {
+    body.party .panel .person {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 14.70196%; }
-      #party-teaser .person:last-child {
+      width: 48.82117%; }
+      body.party .panel .person:last-child {
         margin-right: 0; }
-      #party-teaser .person img {
-        display: inline; }
-    #party-teaser .girls {
-      display: block; }
-      #party-teaser .girls::after {
-        clear: both;
-        content: "";
-        display: table; }
-      #party-teaser .girls .person {
+      body.party .panel .person:nth-child(even) {
+        margin-right: 0; }
+      body.party .panel .person aside {
         float: left;
         display: block;
-        margin-right: 2.01406%;
-        width: 12.55938%; }
-        #party-teaser .girls .person:last-child {
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        margin-left: 8.5298%; }
+        body.party .panel .person aside:last-child {
           margin-right: 0; }
-        #party-teaser .girls .person:first-child {
-          margin-left: 7.28672%; }
-    #party-teaser .boys {
-      display: block; }
-      #party-teaser .boys::after {
-        clear: both;
-        content: "";
-        display: table; }
-      #party-teaser .boys .person {
+      body.party .panel .person article {
         float: left;
         display: block;
-        margin-right: 2.01406%;
-        width: 12.55938%; }
-        #party-teaser .boys .person:last-child {
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        margin-left: 8.5298%;
+        margin-top: 0; }
+        body.party .panel .person article:last-child {
           margin-right: 0; } }
-

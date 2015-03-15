@@ -40,6 +40,9 @@ body.about #sub-hero {
 }
 body.party #sub-hero {
   background:$pink;
+  h1 {
+    bottom:10%;
+  }
 }
 
 body.event #sub-hero {
