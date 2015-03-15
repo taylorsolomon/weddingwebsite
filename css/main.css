@@ -470,9 +470,9 @@ body.menu-open {
       .menu-trigger a:after {
         content: 'menu'; } }
 
-body.about .menu-trigger a, body.party .menu-trigger a {
+body.about .menu-trigger a, body.party .menu-trigger a, body.registries .menu-trigger a {
   border-color: #fff; }
-  body.about .menu-trigger a:before, body.about .menu-trigger a:after, body.party .menu-trigger a:before, body.party .menu-trigger a:after {
+  body.about .menu-trigger a:before, body.about .menu-trigger a:after, body.party .menu-trigger a:before, body.party .menu-trigger a:after, body.registries .menu-trigger a:before, body.registries .menu-trigger a:after {
     color: #fff !important; }
 
 #menu ul {
@@ -566,7 +566,8 @@ body.about #sub-hero {
   background-size: cover; }
 
 body.party #sub-hero {
-  background: #FE7193; }
+  background: #FE7193;
+  background: linear-gradient(#fea4ba, #FE7193); }
   body.party #sub-hero h1 {
     bottom: 10%; }
 
@@ -583,7 +584,8 @@ body.guests #sub-hero {
 body.registries #sub-hero {
   background: url(../images/hero-registries.jpg) 50% no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background: #112442; }
 
 .panel {
   background: #fff;
@@ -662,6 +664,29 @@ body.registries #sub-hero {
         padding: 0 2.35765% 0 0; }
         .panel.reverse article:last-child {
           margin-right: 0; } }
+
+body.registries article {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  padding: 2em;
+  text-align: center; }
+  body.registries article:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 568px)  {
+    body.registries article {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-left: 0%; }
+      body.registries article:last-child {
+        margin-right: 0; }
+      body.registries article:nth-child(2n) {
+        margin-right: 0; }
+      body.registries article:nth-child(2n+1) {
+        clear: left; } }
 
 #party-teaser {
   padding: 5em 0.5em 0; }

@@ -39,7 +39,9 @@ body.about #sub-hero {
   background-size:cover;
 }
 body.party #sub-hero {
-  background:$pink;
+  background: $pink;
+  background: linear-gradient(lighten($pink, 10%), $pink);
+  //background-size: initial;
   h1 {
     bottom:10%;
   }
@@ -59,6 +61,7 @@ body.registries #sub-hero {
   background: url(../images/hero-registries.jpg) 50% no-repeat;
   background-size:cover;
   background-attachment: fixed;
+  background:$navy;
 }
 
 
@@ -151,4 +154,19 @@ body.registries #sub-hero {
 
 }
 
+body.registries {
 
+  article {
+    @include span-columns(12);
+    padding: 2em;
+    text-align: center;
+
+    @include media($tablet) {
+      @include span-columns(6);
+      @include shift(0);
+      @include omega(2n);
+    }
+  }
+
+
+}
