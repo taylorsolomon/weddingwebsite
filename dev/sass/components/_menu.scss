@@ -1,49 +1,90 @@
 #menu {
-  height: 100%;
-  position:absolute;
-  left:0;
-  top:0;
-  width:240px;
   background: #112442 none repeat scroll 0% 0%;
-  transition: all 0.5s ease 0s;
-  visibility: hidden;
-  z-index:0;
-  transform: translate3d(-50%,0,0);
-  font-family: "Lato";
 }
 
-
-.push-contain {
+.sidy__container {
   position: relative;
-  left: 0px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.sidy__pusher {
+  position: relative;
+  left: 0;
   z-index: 99;
   height: 100%;
-  perspective: 1000px;
-  transition: transform 0.5s ease 0s;
-  -webkit-backface-visibility: hidden;
-}
 
-body {
-  overflow-x:hidden;
-  overflow-y:auto;
-}
-
-body.menu-open {
-  overflow-x:hidden;
-
-  .push-contain {
-    transform: translate3d(240px,0,0);
-    overflow-y:scroll;
-    -webkit-overflow-scrolling: touch;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: rgba(0,0,0,0.15);
+    opacity: 0;
+    @include transition(opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s);
   }
-
-  #menu {
-    visibility: visible;
-    transform: translate3d(0,0,0);
-    z-index:0;
-  }
-
 }
+
+.sidy__content {
+  position: relative;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.sidy__panel {
+  position: absolute;
+  overflow: auto;
+
+  visibility: hidden;
+  z-index: 100;
+
+  /*background: #333332;
+  -webkit-box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+    -moz-box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+    box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);*/
+
+    &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    content: '';
+    opacity: 1;
+    @include transition(opacity 0.5s);
+    }
+}
+
+.sidy--opened {
+    .sidy__pusher::after {
+        opacity: 1;
+    width: 100%;
+        height: 100%;
+        @include transition(opacity 0.5s);
+    }
+
+    .sidy__panel::after {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        @include transition(opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s);
+    }
+}
+
+.sidy--after-none::after {
+  display: none;
+}
+
+.sidy--to-open:focus {
+  outline:none !important; /* overrides chrome default focus outline */
+}
+
 
 .menu-trigger {
   position:absolute;
@@ -101,7 +142,7 @@ body.menu-open {
 
 }
 
-body.about, body.party, body.registries {
+body.about, body.party {
   .menu-trigger {
     a {
       border-color:#fff;

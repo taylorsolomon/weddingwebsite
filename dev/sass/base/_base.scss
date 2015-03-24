@@ -22,3 +22,19 @@ img {
 .shrinkwrap {
   @include outer-container;
 }
+
+a {
+  color:$navy;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:visited, &:focus, &:active {
+    text-decoration: none;
+    color: $navy;
+  }
+
+
+  &:hover {
+    color: lighten($navy, 30%);
+  }
+}

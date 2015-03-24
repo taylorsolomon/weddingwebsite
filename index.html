@@ -6,8 +6,8 @@
     <title></title>
     <meta name="description" content="Emily Wymer and Taylor Solomon are getting married. Get the details.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
-<!-- <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Playball|Jacques+Francois|Dynalight|Sail|Antic+Didone' rel='stylesheet' type='text/css'> -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,100,700' rel='stylesheet' type='text/css'>
+
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <link rel="stylesheet" href="css/main.css">
@@ -15,83 +15,87 @@
   </head>
   <body>
 
-  <nav id='menu' class='main-menu'>
-    <ul>
-    <li><a class='couple' href='about.html'>About the Couple</a></li>
-    <li><a class='party' href='party.html'>Bridal Party</a></li>
-    <li><a class='wedding' href='event.html'>About the Wedding</a></li>
-    <li><a class='guest' href='guests.html'>Guest Information</a></li>
-    <li><a class='registry' href='registries.html'>Registries</a></li>
-    </ul>
-  </nav>
+  <div class='sidy__container'>
 
-  <div class='push-contain'>
-    <div class='menu-trigger'>
-      <a href='#'><span>Menu</span></a>
-    </div>
-    <!--[if lt IE 9]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <div id='hero' >
-    <!-- data-top-bottom='background-position: 50% -100px' data-top="background-position: 50% 0px"<img src='images/hero.jpg' data-top-bottom="transform:translate3d(0px, 30%, 0px)" data-top="transform:translate3d(0px, 0%, 0px)" /> -->
-      <!-- Add your site or application content here -->
+    <nav id='menu' data-position="left" data-size="240px" data-fx="slide_along" class="sidy__panel">
+      <ul>
+      <li><a class='home' href='index.html'>Home</a></li>
+      <li><a class='couple' href='about.html'>About the Couple</a></li>
+      <li><a class='party' href='party.html'>Bridal Party</a></li>
+      <li><a class='wedding' href='event.html'>About the Wedding</a></li>
+      <li><a class='guest' href='guests.html'>Guest Information</a></li>
+      <li><a class='registry' href='registries.html'>Registries</a></li>
+      </ul>
+    </nav>
 
-      <h1>Taylor &amp; Emily</h1>
+    <div class='sidy__content'>
+      <div class='menu-trigger'>
+        <a class='sidy--to-open' href='#' data-panel='menu'><span>Menu</span></a>
+      </div>
+      <!--[if lt IE 9]>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <div id='hero'>
+      <!-- data-top-bottom='background-position: 50% -100px' data-top="background-position: 50% 0px"<img src='images/hero.jpg' data-top-bottom="transform:translate3d(0px, 30%, 0px)" data-top="transform:translate3d(0px, 0%, 0px)" /> -->
+        <!-- Add your site or application content here -->
 
-    </div>
-
-    <div id='homepage-detail'>
-      <div class="shrinkwrap">
-
-        <div class='detail'>
-          <div class="ribbon">
-            <strong class="ribbon-content"><h3>Ceremony</h3></strong>
-          </div>
-          <img src='./images/church.jpg' />
-          <div id="" class="vcard">
-            <div class="org">Some Church Name</div>
-            <div class="adr">
-              <div class="street-address">123 Some Blvd</div>
-              <span class="locality">Potomac Falls</span>
-              ,
-              <span class="region">VA</span>
-              ,
-              <span class="postal-code">20165</span>
-            </div>
-          </div>
-          <span class='time'>3:00PM</span>
-        </div>
-
-
-        <div class='detail'>
-          <div class="ribbon">
-            <strong class="ribbon-content"><h3>Reception</h3></strong>
-          </div>
-          <img src='./images/trump.jpg' />
-          <div id="" class="vcard">
-            <div class="org">Trump National Country Club</div>
-            <div class="adr">
-              <div class="street-address">20391 Lowes Island Blvd</div>
-              <span class="locality">Potomac Falls</span>
-              ,
-              <span class="region">VA</span>
-              ,
-              <span class="postal-code">20165</span>
-            </div>
-          </div>
-          <time>5:00PM</time>
-
-        </div>
+        <h1>Taylor &amp; Emily</h1>
 
       </div>
-    </div>
 
-  </div>
+      <div id='homepage-detail'>
+        <div class="shrinkwrap">
 
+          <div class='detail'>
+            <div class="ribbon">
+              <strong class="ribbon-content"><h3>Ceremony</h3></strong>
+            </div>
+            <img src='./images/church.jpg' />
+            <div id="" class="vcard">
+              <div class="org">Some Church Name</div>
+              <div class="adr">
+                <div class="street-address">123 Some Blvd</div>
+                <span class="locality">Potomac Falls</span>
+                ,
+                <span class="region">VA</span>
+                ,
+                <span class="postal-code">20165</span>
+              </div>
+            </div>
+            <span class='time'>3:00PM</span>
+          </div>
+
+
+          <div class='detail'>
+            <div class="ribbon">
+              <strong class="ribbon-content"><h3>Reception</h3></strong>
+            </div>
+            <img src='./images/trump.jpg' />
+            <div id="" class="vcard">
+              <div class="org">Trump National Country Club</div>
+              <div class="adr">
+                <div class="street-address">20391 Lowes Island Blvd</div>
+                <span class="locality">Potomac Falls</span>
+                ,
+                <span class="region">VA</span>
+                ,
+                <span class="postal-code">20165</span>
+              </div>
+            </div>
+            <time>5:00PM</time>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div> <!-- / Sidy__content -->
+  </div> <!-- / Sidy__container -->
+
+  <script src="js/vendor/skrollr.min.js"></script>
   <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-  <script src="js/vendor/skrollr.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/vendor/sidy.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
