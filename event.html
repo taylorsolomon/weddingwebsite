@@ -6,7 +6,7 @@
     <title></title>
     <meta name="description" content="Emily Wymer and Taylor Solomon are getting married. Get the details.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,100,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo|Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <link rel="stylesheet" href="css/main.css">
@@ -38,7 +38,7 @@
       <div id='sub-hero'>
 
         <div id='map-canvas'></div>
-        <h1>The Day Of</h1>
+        <h1>Wedding Information</h1>
 
       </div>
 
@@ -47,41 +47,6 @@
         <div class='shrinkwrap'>
 
           <article class='location'>
-            <h2>Ceremony</h2>
-
-            <div class='details'>
-              <div id="" class="vcard">
-                <div class="org">Church Name</div>
-
-                <div class="adr">
-                  <a href='https://maps.google.com?daddr=Trump+National+Golf+Club,+20391+Lowes+Island+Boulevard,+Sterling,+VA+20165'>
-
-                    <i class='icon-place'></i>
-
-                    <div class="street-address">123 Some Blvd</div>
-                    <span class="locality">Potomac Falls</span>
-                    ,
-                    <span class="region">VA</span>
-                    ,
-                    <span class="postal-code">20165</span>
-                  </a>
-                </div>
-              </div>
-
-              <span class='time'>3:00PM</span>
-            </div>
-
-            <h4>Parking Information</h4>
-            <p> Suspendisse aliquet imperdiet cursus. Duis ac hendrerit justo. Curabitur et nibh quis lectus dignissim condimentum at eget mi. Pellentesque quis odio a justo iaculis venenatis. Phasellus ornare maximus convallis. Mauris finibus cursus nunc ac tincidunt. Cras non turpis rutrum, interdum quam sed, aliquam arcu. </p>
-            <p>Duis facilisis urna dolor, nec vehicula ipsum lobortis sit amet. Sed ut nunc velit. Sed ultricies euismod sem id mattis. Proin vulputate in tortor quis pulvinar.</p>
-
-
-          </article>
-
-          <article class='location'>
-
-            <h2>Reception</h2>
-
 
             <div class='details'>
               <div id="" class="vcard">
@@ -104,8 +69,10 @@
 
               <span class='time'>5:00PM</span>
             </div>
-            <h4>Parking Information</h4>
-            <p>Parking is available at the front of the country club.</p>
+
+              <h4>Parking Information</h4>
+              <p>Parking is available at the front of the country club.</p>
+              <p><a class='website' target='_blank' href='http://www.trumpnationaldc.com/'>Website<i class='icon-chevron-right'></i></a></p>
             </p>
 
           </article>
@@ -130,7 +97,7 @@
   <script type="text/javascript">
     function initialize() {
 
-styles = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
+styles = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#cccccc"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
 
       var trump = new google.maps.LatLng(39.05245, -77.34754);
       var church = new google.maps.LatLng(38.900216, -77.111827);
@@ -138,11 +105,11 @@ styles = [{"featureType":"administrative","elementType":"labels.text.fill","styl
 
 
       var mapOptions = {
-        center: {lat: 38.93361, lng: -77.37342},
-        zoom: 11,
+        center: trump,
+        zoom: 12,
         scrollwheel: false,
         disableDefaultUI: true,
-        backgroundColor: '#112442',
+        backgroundColor: '#f2f2f2',
         styles: styles,
       };
 
@@ -156,18 +123,9 @@ styles = [{"featureType":"administrative","elementType":"labels.text.fill","styl
           title:"Reception"
       });
 
-      var churchmarker = new google.maps.Marker({
-          position: church,
-          map: map,
-          title:"Ceremony"
-      });
 
       bounds.extend(trump.position);
-      console.log(bounds);
-      bounds.extend(church.position);
-      console.log(bounds);
 
-      churchmarker.setMap(map);
       trumpmarker.setMap(map);
     }
 

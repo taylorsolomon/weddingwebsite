@@ -10,22 +10,27 @@
   }
 
   h1 {
-    font-size: 3em;
+    font-size: 4em;
     bottom:10%;
     display:block;
     position:absolute;
     margin:auto;
     left:0;
+    font-family: 'libre-caslon';
     right:0;
     text-align: center;
+    font-style: normal;
     text-transform: uppercase;
-    font-family: 'Lato';
-    font-weight:300;
-    color: #fff;
-    text-shadow: 4px 4px 3px rgba(0,0,0,0.3);
+    font-weight: normal;
+    color: $navy;
+    font-weight: 400;
+    //text-shadow: 4px 4px 3px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 0 8px;
+    background: rgba(255,255,255,0.2);
 
     @include media($tablet) {
-      bottom:40%;
+      bottom:20%;
     }
     @include media($desktop) {
       bottom: 20%;
@@ -35,23 +40,44 @@
 }
 
 body.about #sub-hero {
-  background: url(../images/hero-about.jpg) 50% 0px no-repeat;
+  background: url(../images/hero-about.jpg) no-repeat center center;
   background-size:cover;
-  background-attachment: fixed;
+  h1 {
+    color: #fff;
+  }
+  @include media($tablet) {
+    background: url(../images/hero-about.jpg) no-repeat ;
+    //background: url(../images/hero-about.jpg) no-repeat center -100px fixed ;
+    background-size:cover;
+  }
+
 }
 
 body.party #sub-hero {
-  background-attachment: fixed;
-  padding: 75px 75px 75px 75px;
+  // background-attachment: fixed;
+  background: url(../images/test.png) center center;
+  padding: 75px 20px 0;
+  background: $navy;
+
+  h1 {
+    color: #fff;
+  }
 
   .inner-container {
     width:100%;
     height: 100%;
-    border: 10px solid #fff;
   }
   h1 {
-    bottom:20%;
-    color: $navy;
+    bottom:5%;
+  }
+
+
+  @include media($tablet) {
+    h1 {
+      bottom:15%;
+    }
+    padding: 75px 75px 75px 75px;
+
   }
 }
 
@@ -70,7 +96,6 @@ body.guests #sub-hero {
 body.registries #sub-hero {
   background: url(../images/hero-registries.jpg) 50% no-repeat;
   background-size:cover;
-  background-attachment: fixed;
 }
 
 
@@ -87,14 +112,8 @@ body.registries #sub-hero {
   h2 {
     display:block;
     text-align:center;
-    //text-transform: uppercase;
-    //letter-spacing: 0.1em;
-    //word-spacing: 0.5em;
   }
 
-  // .left, .right {
-  //   padding: 0 20px;
-  // }
   aside {
     text-align: center;
   }
@@ -133,7 +152,7 @@ body.registries #sub-hero {
     height: 70px 0 90px;
 
     .shrinkwrap {
-      @include pad(0 default);
+      @include pad(0 3em);
     }
 
     aside {
@@ -205,14 +224,34 @@ body.registries {
 }
 
 body.event {
+  #sub-hero {
+    background: #f2f2f2;
+    h1 {
+      bottom: 5%;
+      color: $navy;
+    }
+  }
+
   article.location {
     margin-bottom: 2em;
 
     a {
       text-decoration: none;
     }
+    .time {
+      padding: 20px 0;
+      margin:0px 0 20px;
+      display:block;
+      border-top: 1px solid $grey;
+      border-bottom:1px solid $grey;
+      text-align: center;
+      clear:left;
+        font-weight: bold;
 
+    }
     @include media($tablet) {
+      @include span-columns(8);
+      @include shift(2);
       .details {
         @include row;
       }
@@ -220,19 +259,21 @@ body.event {
         @include span-columns(8);
       }
       .time {
-        display:block;
+        clear:none;
         @include span-columns(4);
         margin-top:0.75em;
         margin-bottom: 0.75em;
         padding: 0.75em 1em;
         border-left: 1px solid $grey;
-        font-weight: bold;
+        border-top:none;
+        border-bottom: none;
       }
 
     }
 
     @include media($desktop) {
-
+      @include span-columns(6);
+      @include shift(3);
     }
 
     i {
@@ -249,7 +290,20 @@ body.event {
       margin: 0 0 20px 0;
     }
 
+    h4, p {
+      text-align: center;
+    }
 
+    a.website i {
+      float:none;
+      font-size: 1em;
+      &:before {
+        position:relative;
+        top:2px;
+        font-size: initial;
+      }
+      margin-right: 0;
+    }
   }
 }
 

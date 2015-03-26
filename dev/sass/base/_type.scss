@@ -1,5 +1,7 @@
 body {
-  font-family: "Lato";
+  font-family: "Arvo", Georgia, Times, serif;
+  letter-spacing: normal;
+  font-size: 0.8em;
   color: $navy;
 }
 
@@ -7,21 +9,33 @@ p, h1,h2,h3,h4,h5,h6 {
   transition: font-size 0.2s ease-in-out;
 }
 
-p { line-height: 1.5;
+p { line-height: 1.7;
     margin: 0 0 1em;    }
 
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "libre-caslon", 'Times', serif;
+}
+
 h1 {
-  font-size: 2em;
+  font-size: 3em;
 }
 
 h2 {
-  font-weight: 200;
+  //font-style: italic;
   font-size: rem(40px);
+  //font-family: 'Libre Baskerville';
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
-h3 {
+h3, h4 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
 
 }
+
+
 
 address {
   font-style: normal;

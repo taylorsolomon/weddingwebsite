@@ -6,7 +6,7 @@
 
 
 #party-teaser {
-  padding: 5em 0.5em 0 ;
+  padding: 0 0.5em 0 ;
 
   .person {
     @include span-columns(2);
@@ -36,10 +36,10 @@
     // and offset by 1 so they look right
     @include row;
     .person {
-      @include span-columns(2 of 14);
-      &:first-child {
-        @include shift;
-      }
+      @include span-columns(2 of 12);
+      // &:last-child {
+      //   @include omega;
+      // }
     }
   }
 
@@ -112,14 +112,16 @@ body.party .panel {
     .name {
       display:block;
       font-size: rem(20);
+      font-family: 'libre-caslon';
+      text-transform: uppercase;
     }
 
     .duty {
       display:block;
       text-transform: uppercase;
-      font-weight: 700;
       color: #777;
       padding-bottom: rem(10);
+      font-family: 'arvo';
     }
 
     @include media($tablet) {

@@ -164,22 +164,32 @@ input[type="checkbox"], input[type="radio"] {
   padding: 0; }
 
 body {
-  font-family: "Lato";
+  font-family: "Arvo", Georgia, Times, serif;
+  letter-spacing: normal;
+  font-size: 0.8em;
   color: #112442; }
 
 p, h1, h2, h3, h4, h5, h6 {
   transition: font-size 0.2s ease-in-out; }
 
 p {
-  line-height: 1.5;
+  line-height: 1.7;
   margin: 0 0 1em; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "libre-caslon", 'Times', serif; }
+
 h1 {
-  font-size: 2em; }
+  font-size: 3em; }
 
 h2 {
-  font-weight: 200;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: normal; }
+
+h3, h4 {
+  text-transform: uppercase;
+  letter-spacing: 1px; }
 
 address {
   font-style: normal;
@@ -200,25 +210,13 @@ address {
   font-style: normal; }
 
 @font-face {
-  font-family: 'antoniobold';
-  src: url('../fonts/Antonio-Bold-webfont.eot');
-  src: url('../fonts/Antonio-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Antonio-Bold-webfont.woff2') format('woff2'), url('../fonts/Antonio-Bold-webfont.woff') format('woff'), url('../fonts/Antonio-Bold-webfont.ttf') format('truetype'), url('../fonts/Antonio-Bold-webfont.svg#antoniobold') format('svg');
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'antoniolight';
-  src: url('../fonts/Antonio-Light-webfont.eot');
-  src: url('../fonts/Antonio-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Antonio-Light-webfont.woff2') format('woff2'), url('../fonts/Antonio-Light-webfont.woff') format('woff'), url('../fonts/Antonio-Light-webfont.ttf') format('truetype'), url('../fonts/Antonio-Light-webfont.svg#antoniolight') format('svg');
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'antonioregular';
-  src: url('../fonts/Antonio-Regular-webfont.eot');
-  src: url('../fonts/Antonio-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Antonio-Regular-webfont.woff2') format('woff2'), url('../fonts/Antonio-Regular-webfont.woff') format('woff'), url('../fonts/Antonio-Regular-webfont.ttf') format('truetype'), url('../fonts/Antonio-Regular-webfont.svg#antonioregular') format('svg');
-  font-weight: normal;
-  font-style: normal; }
+  font-family: 'libre-caslon';
+  src: url('../fonts/LibreCaslonDisplay-Regular-Beta41_gdi.eot');
+  src: url('../fonts/LibreCaslonDisplay-Regular-Beta41_gdi.eot?#iefix') format('embedded-opentype'), url('../fonts/LibreCaslonDisplay-Regular-Beta41_gdi.woff') format('woff'), url('../fonts/LibreCaslonDisplay-Regular-Beta41_gdi.ttf') format('truetype'), url('../fonts/LibreCaslonDisplay-Regular-Beta41_gdi.svg#LibreCaslonDisplay-Regular-Beta41') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U20 -2265; }
 
 @font-face {
   font-family: 'icons';
@@ -300,7 +298,7 @@ html, body, .push-contain {
   height: 100%; }
 
 body {
-  background: #fff;
+  background: #112442;
   position: relative; }
 
 img {
@@ -333,7 +331,7 @@ a {
   background-position: center;
   position: relative; }
   #hero h1 {
-    font-size: 3em;
+    font-size: 5em;
     bottom: 5%;
     display: block;
     position: absolute;
@@ -347,12 +345,11 @@ a {
     text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3); }
 
 #homepage-detail {
-  background: #112442;
+  background: #FFDCDC;
   padding: 30px 10px; }
   #homepage-detail .detail {
     position: relative;
     text-align: center;
-    color: #fff;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -368,34 +365,57 @@ a {
   #hero {
     height: 500px; }
     #hero h1 {
-      font-size: 6em; }
-  #homepage-detail .detail {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%; }
-    #homepage-detail .detail:last-child {
-      margin-right: 0; } }
+      font-size: 10em; }
+  #homepage-detail {
+    display: block; }
+    #homepage-detail::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #homepage-detail .detail {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-left: 25.58941%; }
+      #homepage-detail .detail:last-child {
+        margin-right: 0; } }
 
 @media screen and (min-width: 1000px)  {
   #hero {
     height: 100%; }
     #hero h1 {
-      font-size: 10em;
+      font-size: 13em;
       bottom: 5%; }
   #homepage-detail {
     padding: 60px 10px; }
+    #homepage-detail h2 {
+      padding-top: 40px;
+      float: left; }
     #homepage-detail .detail {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 40.29137%;
-      margin-left: 8.5298%; }
+      width: 100%;
+      margin-left: 0%; }
       #homepage-detail .detail:last-child {
         margin-right: 0; }
-      #homepage-detail .detail:nth-child(even) {
-        margin-right: 0;
-        margin-left: 0%; } }
+      #homepage-detail .detail time, #homepage-detail .detail .vcard {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 40.29137%;
+        float: left; }
+        #homepage-detail .detail time:last-child, #homepage-detail .detail .vcard:last-child {
+          margin-right: 0; }
+      #homepage-detail .detail img {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%;
+        float: right; }
+        #homepage-detail .detail img:last-child {
+          margin-right: 0; } }
 
 #menu {
   background: #112442 none repeat scroll 0% 0%; }
@@ -579,41 +599,56 @@ body.about .menu-trigger a, body.party .menu-trigger a {
     #sub-hero {
       height: 650px; } }
   #sub-hero h1 {
-    font-size: 3em;
+    font-size: 4em;
     bottom: 10%;
     display: block;
     position: absolute;
     margin: auto;
     left: 0;
+    font-family: 'libre-caslon';
     right: 0;
     text-align: center;
+    font-style: normal;
     text-transform: uppercase;
-    font-family: 'Lato';
-    font-weight: 300;
-    color: #fff;
-    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3); }
+    font-weight: normal;
+    color: #112442;
+    font-weight: 400;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0 8px;
+    background: rgba(255, 255, 255, 0.2); }
     @media screen and (min-width: 568px)  {
       #sub-hero h1 {
-        bottom: 40%; } }
+        bottom: 20%; } }
     @media screen and (min-width: 1000px)  {
       #sub-hero h1 {
         bottom: 20%; } }
 
 body.about #sub-hero {
-  background: url(../images/hero-about.jpg) 50% 0px no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
+  background: url(../images/hero-about.jpg) no-repeat center center;
+  background-size: cover; }
+  body.about #sub-hero h1 {
+    color: #fff; }
+  @media screen and (min-width: 568px)  {
+    body.about #sub-hero {
+      background: url(../images/hero-about.jpg) no-repeat;
+      background-size: cover; } }
 
 body.party #sub-hero {
-  background-attachment: fixed;
-  padding: 75px 75px 75px 75px; }
+  background: url(../images/test.png) center center;
+  padding: 75px 20px 0;
+  background: #112442; }
+  body.party #sub-hero h1 {
+    color: #fff; }
   body.party #sub-hero .inner-container {
     width: 100%;
-    height: 100%;
-    border: 10px solid #fff; }
+    height: 100%; }
   body.party #sub-hero h1 {
-    bottom: 20%;
-    color: #112442; }
+    bottom: 5%; }
+  @media screen and (min-width: 568px)  {
+    body.party #sub-hero {
+      padding: 75px 75px 75px 75px; }
+      body.party #sub-hero h1 {
+        bottom: 15%; } }
 
 body.event #sub-hero {
   background: url(../images/hero-event.jpg) 50% no-repeat;
@@ -627,8 +662,7 @@ body.guests #sub-hero {
 
 body.registries #sub-hero {
   background: url(../images/hero-registries.jpg) 50% no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
+  background-size: cover; }
 
 .panel {
   background: #fff;
@@ -672,7 +706,7 @@ body.registries #sub-hero {
     .panel {
       height: 70px 0 90px; }
       .panel .shrinkwrap {
-        padding: 0 2.35765%; }
+        padding: 0 3em; }
       .panel aside {
         float: left;
         display: block;
@@ -750,36 +784,68 @@ body.registries article {
     #map-canvas {
       height: 100%; } }
 
+body.event #sub-hero {
+  background: #f2f2f2; }
+  body.event #sub-hero h1 {
+    bottom: 5%;
+    color: #112442; }
 body.event article.location {
   margin-bottom: 2em; }
   body.event article.location a {
     text-decoration: none; }
+  body.event article.location .time {
+    padding: 20px 0;
+    margin: 0px 0 20px;
+    display: block;
+    border-top: 1px solid #9291A4;
+    border-bottom: 1px solid #9291A4;
+    text-align: center;
+    clear: left;
+    font-weight: bold; }
   @media screen and (min-width: 568px)  {
-    body.event article.location .details {
-      display: block; }
-      body.event article.location .details::after {
-        clear: both;
-        content: "";
-        display: table; }
-    body.event article.location .vcard {
+    body.event article.location {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 65.88078%; }
-      body.event article.location .vcard:last-child {
+      width: 65.88078%;
+      margin-left: 17.05961%; }
+      body.event article.location:last-child {
         margin-right: 0; }
-    body.event article.location .time {
-      display: block;
+      body.event article.location .details {
+        display: block; }
+        body.event article.location .details::after {
+          clear: both;
+          content: "";
+          display: table; }
+      body.event article.location .vcard {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%; }
+        body.event article.location .vcard:last-child {
+          margin-right: 0; }
+      body.event article.location .time {
+        clear: none;
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        padding: 0.75em 1em;
+        border-left: 1px solid #9291A4;
+        border-top: none;
+        border-bottom: none; }
+        body.event article.location .time:last-child {
+          margin-right: 0; } }
+  @media screen and (min-width: 1000px)  {
+    body.event article.location {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 31.76157%;
-      margin-top: 0.75em;
-      margin-bottom: 0.75em;
-      padding: 0.75em 1em;
-      border-left: 1px solid #9291A4;
-      font-weight: bold; }
-      body.event article.location .time:last-child {
+      width: 48.82117%;
+      margin-left: 25.58941%; }
+      body.event article.location:last-child {
         margin-right: 0; } }
   body.event article.location i {
     float: left;
@@ -790,9 +856,19 @@ body.event article.location {
     width: 100%;
     float: left;
     margin: 0 0 20px 0; }
+  body.event article.location h4, body.event article.location p {
+    text-align: center; }
+  body.event article.location a.website i {
+    float: none;
+    font-size: 1em;
+    margin-right: 0; }
+    body.event article.location a.website i:before {
+      position: relative;
+      top: 2px;
+      font-size: initial; }
 
 #party-teaser {
-  padding: 5em 0.5em 0; }
+  padding: 0 0.5em 0; }
   #party-teaser .person {
     float: left;
     display: block;
@@ -819,12 +895,10 @@ body.event article.location {
     #party-teaser .girls .person {
       float: left;
       display: block;
-      margin-right: 2.01406%;
-      width: 12.55938%; }
+      margin-right: 2.35765%;
+      width: 14.70196%; }
       #party-teaser .girls .person:last-child {
         margin-right: 0; }
-      #party-teaser .girls .person:first-child {
-        margin-left: 7.28672%; }
   #party-teaser .boys {
     display: block; }
     #party-teaser .boys::after {
@@ -898,13 +972,15 @@ body.party .panel .person {
     margin: 0 auto; }
   body.party .panel .person .name {
     display: block;
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    font-family: 'libre-caslon';
+    text-transform: uppercase; }
   body.party .panel .person .duty {
     display: block;
     text-transform: uppercase;
-    font-weight: 700;
     color: #777;
-    padding-bottom: 0.625rem; }
+    padding-bottom: 0.625rem;
+    font-family: 'arvo'; }
   @media screen and (min-width: 568px)  {
     body.party .panel .person {
       padding: 30px 0 30px;
