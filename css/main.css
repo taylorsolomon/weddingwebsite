@@ -445,7 +445,8 @@ a {
 .sidy__content {
   position: relative;
   overflow-y: auto;
-  height: 100%; }
+  height: 100%;
+  -webkit-overflow-scrolling: touch; }
 
 .sidy__panel {
   position: absolute;
@@ -980,7 +981,7 @@ body.party .panel .person {
     text-transform: uppercase;
     color: #777;
     padding-bottom: 0.625rem;
-    font-family: 'arvo'; }
+    font-family: 'Arvo'; }
   @media screen and (min-width: 568px)  {
     body.party .panel .person {
       padding: 30px 0 30px;
