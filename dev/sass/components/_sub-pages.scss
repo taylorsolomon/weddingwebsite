@@ -10,7 +10,6 @@
   }
 
   h1 {
-    font-size: 4em;
     bottom:10%;
     display:block;
     position:absolute;
@@ -90,7 +89,7 @@ body.event #sub-hero {
 body.guests #sub-hero {
   background: url(../images/hero-guests.jpg) 50% no-repeat;
   background-size:cover;
-  background-attachment: fixed;
+  background: white;
 }
 
 body.registries #sub-hero {
@@ -133,58 +132,63 @@ body.registries #sub-hero {
     background: $grey;
   }
 
-  @include media($tablet) {
-    padding: 60px 0 80px;
 
-    aside {
-      @include span-columns(8);
-      @include shift(2);
+}
+
+body.about {
+  .panel {
+    @include media($tablet) {
+      padding: 60px 0 80px;
+
+      aside {
+        @include span-columns(8);
+        @include shift(2);
+      }
+
+      article {
+        @include span-columns(10);
+        @include shift(1);
+      }
+
     }
 
-    article {
-      @include span-columns(10);
-      @include shift(1);
-    }
+    @include media($desktop) {
+      height: 70px 0 90px;
 
-  }
+      .shrinkwrap {
+        @include pad(0 3em);
+      }
 
-  @include media($desktop) {
-    height: 70px 0 90px;
-
-    .shrinkwrap {
-      @include pad(0 3em);
-    }
-
-    aside {
-      @include span-columns(6);
-      @include shift(0);
-      @include pad(0 default 0 0);
-    }
-
-    article {
-      @include span-columns(6);
-      @include shift(0);
-      @include omega;
-      @include pad(0 0 0 default);
-    }
-
-    &.reverse {
       aside {
         @include span-columns(6);
-        @include shift(6);
-        @include pad(0 0 0 default);
+        @include shift(0);
+        @include pad(0 default 0 0);
       }
 
       article {
         @include span-columns(6);
-        @include shift(-12);
-        @include pad(0 default 0 0);
-
+        @include shift(0);
+        @include omega;
+        @include pad(0 0 0 default);
       }
+
+      &.reverse {
+        aside {
+          @include span-columns(6);
+          @include shift(6);
+          @include pad(0 0 0 default);
+        }
+
+        article {
+          @include span-columns(6);
+          @include shift(-12);
+          @include pad(0 default 0 0);
+
+        }
+      }
+
     }
-
   }
-
 }
 
 body.registries {
@@ -202,12 +206,10 @@ body.registries {
       @include omega(2n);
     }
   }
-
-
 }
 
 #map-canvas {
-  height: 100%;
+  min-height: 250px;
   width:100%;
   img {
     width:auto;
@@ -215,17 +217,19 @@ body.registries {
     max-width: initial;
   }
   @include media($tablet) {
-    height: 100%;
+    min-height: 350px;
   }
 
   @include media($desktop) {
-    height: 100%;
+    min-height: 400px;
   }
 }
 
 body.event {
   #sub-hero {
-    background: #f2f2f2;
+    background: #f2f2f2 url('../images/hero-event.jpg') center center no-repeat;
+    background-size: cover;
+
     h1 {
       bottom: 5%;
       color: $navy;
@@ -281,6 +285,8 @@ body.event {
         font-size: 30px;
       }
       float:left;
+      position: relative;
+      top:-4px;
       margin-right: 1em;
     }
 
@@ -303,6 +309,152 @@ body.event {
         font-size: initial;
       }
       margin-right: 0;
+    }
+  }
+}
+
+
+body.guests {
+
+  .panel {
+
+    h3 {
+      text-align: center;
+    }
+
+    .location {
+      display:block;
+      text-transform: uppercase;
+      color: #777;
+      padding-bottom: rem(10);
+      font-family: 'Arvo';
+      text-align: center;
+    }
+
+    .attraction {
+      margin-bottom:30px;
+    }
+
+    aside {
+      img {
+        max-height: 100px;
+      }
+      margin-bottom: 20px;
+    }
+
+    .two-col {
+      padding: 30px 0;
+      border-top: 1px solid rgba(255,255,255,0.6);
+      border-bottom: 1px solid rgba(255,255,255,0.6);
+      clear:left;
+      @include row;
+      article {
+        @include media($tablet) {
+          @include span-columns(6);
+          @include omega(2n);
+          @include pad(0 3em);
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+
+    @include media($tablet) {
+
+      h3 {
+        text-align: center;
+      }
+
+      .location {
+        text-align: center;
+      }
+
+      .attraction {
+        margin-bottom:40px;
+        @include span-columns(6);
+        @include pad(0 2em);
+        &:nth-child(2n+2) {
+          @include omega;
+        }
+      }
+
+      aside {
+        @include span-columns(12);
+        margin-bottom: 20px;
+        img {
+          max-height: 100px;
+        }
+      }
+
+      article {
+        @include span-columns(12);
+      }
+
+    }
+
+    @include media($desktop) {
+
+      .attraction {
+        margin-bottom:40px;
+        @include span-columns(4);
+        @include pad(0 0);
+
+        &:nth-child(2n+2) {
+          @include span-columns(4);
+        }
+
+        @include omega(3n);
+
+      }
+
+      aside {
+        @include span-columns(12);
+      }
+
+      article {
+        @include span-columns(12);
+      }
+
+    }
+
+  }
+
+}
+
+#scrollToTop {
+  @include media($desktop) {
+    display: none;
+  }
+  position:fixed;
+  bottom: 1em;
+  right:1.5em;
+  height:40px;
+  width: 40px;
+  a {
+    display: block;
+    position: relative;
+    top:0;
+    left:0;
+    height: 40px;
+    width:40px;
+    border-radius: 50%;
+    border:1px solid #f2f2f2;
+    background: rgba(255,255,255,0.6);
+    &:after {
+      content: 'TOP';
+      position:absolute;
+      top:14px;
+      left:10px;
+      right:0;
+      margin:auto;
+      font-size: 9px;
+      //font-weight: bold;
+      font-family: 'Arvo';
+    }
+    &:active {
+      outline:none;
+      background: #f2f2f2;
     }
   }
 }

@@ -24,17 +24,16 @@ img {
 }
 
 a {
-  color:$navy;
+  color: lighten($navy, 20%);
   text-decoration: none;
   transition: color 0.2s ease;
 
   &:visited, &:focus, &:active {
     text-decoration: none;
-    color: $navy;
+    outline: none;
   }
 
-
   &:hover {
-    color: lighten($navy, 30%);
+    color: lighten($navy, 50%);
   }
 }

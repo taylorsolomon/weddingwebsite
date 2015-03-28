@@ -5,12 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="Emily Wymer and Taylor Solomon are getting married. Get the details.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Arvo|Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
   <body class='event'>
 
@@ -37,7 +36,6 @@
       <![endif]-->
       <div id='sub-hero'>
 
-        <div id='map-canvas'></div>
         <h1>Wedding Information</h1>
 
       </div>
@@ -45,6 +43,12 @@
 
       <section class='panel'>
         <div class='shrinkwrap'>
+          <article class='location'>
+
+            <p>The wedding ceremony and ensuing festivities will take place at the Trump National Golf Course in Potomac Falls, Virginia. The course is 40 minutes from downtown Washington D.C. and Arlington, VA, where Emily &amp; Taylor live. </p>
+
+            <p>The ceremony will begin at <strong>5:00 P.M.</strong> and will be followed by a cocktail hour and reception with dinner &amp; dancing.</p>
+          </article>
 
           <article class='location'>
 
@@ -81,6 +85,13 @@
         </div>
       </section>
 
+      <section class='panel'>
+        <div id='map-canvas'></div>
+      </section>
+
+
+      <div id='scrollToTop'><a href='#'></a></div>
+
     </div> <!-- / Sidy__content -->
   </div> <!-- / Sidy__container -->
 
@@ -88,8 +99,8 @@
 
   <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-  <script src="js/vendor/skrollr.min.js"></script>
   <script src="js/vendor/sidy.js"></script>
+  <script src="js/scroll.js"></script>
 
   <script type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC338l7pGhoIjuOCmlcgRDc85NDDbQzifU">
@@ -111,6 +122,7 @@ styles = [{"featureType":"administrative","elementType":"labels.text.fill","styl
         disableDefaultUI: true,
         backgroundColor: '#f2f2f2',
         styles: styles,
+        draggable: true,
       };
 
       var map = new google.maps.Map(document.getElementById('map-canvas'),

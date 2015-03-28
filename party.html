@@ -8,11 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href='http://fonts.googleapis.com/css?family=Arvo|Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
-
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <link rel="stylesheet" href="css/main.css">
-    <!-- // <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
   </head>
   <body class='party'>
 
@@ -252,6 +250,8 @@
         </div>
       </section>
 
+      <div id='scrollToTop'><a href='#'></a></div>
+
     </div> <!-- / Sidy__content -->
   </div> <!-- / Sidy__container -->
 
@@ -260,6 +260,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
   <script src="js/vendor/sidy.js"></script>
+  <script src="js/scroll.js"></script>
   <script type='text/javascript'>
 
     (function($) {
@@ -268,13 +269,13 @@
           $('#party-teaser').find('.person a').on('click', function(e) {
             e.preventDefault();
             var person = $(this).attr('href');
-            console.log($(person).offset().top);
             $("html, body, .sidy__content").animate({scrollTop: $(person).offset().top}, 500);
           });
         }
       });
     })(jQuery);
   </script>
+
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
   //     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

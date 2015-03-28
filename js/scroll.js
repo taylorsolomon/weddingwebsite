@@ -9,3 +9,15 @@
 //   });
 // });
 
+(function ($) {
+
+  $(document).ready(function() {
+
+    $('#scrollToTop').on('click', function(e) {
+      e.preventDefault();
+      $('html, body, .sidy__content').animate({scrollTop: 0}, 500);
+    });
+
+  });
+
+}(jQuery))
