@@ -1,5 +1,7 @@
 #menu {
   background: #112442 none repeat scroll 0% 0%;
+  font-size: 0.8em;
+  letter-spacing: 1px;
 }
 
 .sidy__container {
@@ -133,12 +135,14 @@
     left:30px;
     a:after {
       content: 'menu';
+      font-family: "Lato";
+      font-size:0.8em;
     }
   }
 
 }
 
-body.about, body.party {
+body.about, body.party, body.honeymoon {
   .menu-trigger {
     a {
       border-color:#fff;

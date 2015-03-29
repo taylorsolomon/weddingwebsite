@@ -87,9 +87,9 @@ body.event #sub-hero {
 }
 
 body.guests #sub-hero {
-  background: url(../images/hero-guests.jpg) 50% no-repeat;
+  background: url(../images/virginia.jpg) 50% no-repeat;
+  // background: url(../images/virginia-blue.jpg) 50% no-repeat;
   background-size:cover;
-  background: white;
 }
 
 body.registries #sub-hero {
@@ -97,7 +97,10 @@ body.registries #sub-hero {
   background-size:cover;
 }
 
-
+body.honeymoon #sub-hero {
+  background: url(../images/hero-honeymoon.jpg) 50% no-repeat;
+  background-size:cover;
+}
 
 // Panels. This section is complex.
 .panel {
@@ -117,22 +120,44 @@ body.registries #sub-hero {
     text-align: center;
   }
 
+  h3 a {
+    border-color: rgba(0,0,0,0.1);
+    border-width: 2px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 3px;
+    line-height: 1.75;
+  }
+
   &.pink {
     background: $pink-light;
     color: $navy;
+    h3 a {
+      border-color: #aaa;
+    }
   }
 
   &.navy {
     color:#fff;
     background: $navy;
+    h3 a {
+      border-color: rgba(255,255,255,0.2);
+      color:#fff;
+      &:hover {
+        color: lighten($navy, 50%);
+      }
+    }
+    a {
+      color: lighten($navy, 30%);
+      &:hover {
+        color: lighten($navy, 50%);
+      }
+    }
   }
 
   &.grey {
     color: #fff;
     background: $grey;
   }
-
-
 }
 
 body.about {
@@ -260,7 +285,8 @@ body.event {
         @include row;
       }
       .vcard {
-        @include span-columns(8);
+        @include span-columns(6);
+        @include shift;
       }
       .time {
         clear:none;
@@ -305,7 +331,7 @@ body.event {
       font-size: 1em;
       &:before {
         position:relative;
-        top:2px;
+        top:6px;
         font-size: initial;
       }
       margin-right: 0;
@@ -313,8 +339,19 @@ body.event {
   }
 }
 
-
 body.guests {
+
+  h1 {
+    font-family: 'libre-caslon';
+    text-align: center;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #fff;
+    margin: 30px 0 0;
+    font-weight: 400;
+    // border-bottom: 1px solid lighten($navy, 10%);
+  }
 
   .panel {
 
@@ -326,12 +363,197 @@ body.guests {
       display:block;
       text-transform: uppercase;
       color: #777;
+      font-size: 0.8em;
       padding-bottom: rem(10);
       font-family: 'Arvo';
       text-align: center;
+      position: relative;
+      top:-15px;
     }
 
     .attraction {
+      margin-bottom:30px;
+    }
+
+    aside {
+      img {
+        max-height: 100px;
+      }
+      margin-bottom: 20px;
+    }
+
+    .two-col {
+      padding: 30px 0;
+      border-top: 1px solid rgba(255,255,255,0.6);
+      border-bottom: 1px solid rgba(255,255,255,0.6);
+      clear:left;
+      @include row;
+      article {
+        @include media($tablet) {
+          @include span-columns(6);
+          @include omega(2n);
+          @include pad(0 3em);
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+
+    @include media($tablet) {
+
+      h3 {
+        text-align: center;
+      }
+
+      .location {
+        text-align: center;
+      }
+
+      .attraction {
+        margin-bottom:40px;
+        @include span-columns(6);
+        @include pad(0 2em);
+        &:nth-child(2n+2) {
+          @include omega;
+        }
+        &:nth-child(2n+1) {
+          clear:left;
+        }
+      }
+
+      aside {
+        @include span-columns(12);
+        margin-bottom: 20px;
+        img {
+          max-height: 100px;
+        }
+      }
+
+      article {
+        @include span-columns(12);
+      }
+
+    }
+
+    @include media($desktop) {
+
+      .attraction {
+        margin-bottom:40px;
+        @include span-columns(4);
+        @include pad(0 1em);
+
+        &:nth-child(2n+2) {
+          @include span-columns(4);
+        }
+        &:nth-child(2n+1) {
+          clear:none;
+        }
+        @include omega(3n);
+      }
+
+      .attraction.hotel {
+        margin-bottom:40px;
+        @include span-columns(6);
+        @include pad(0 2em);
+        @include omega(2n);
+        &:nth-child(3n+1) {
+          clear:none;
+        }
+      }
+
+      aside {
+        @include span-columns(12);
+      }
+
+      article {
+        @include span-columns(12);
+      }
+
+    }
+
+  }
+
+  .jump-menu {
+    padding:0 10px;
+    ul {
+      width:100%;
+      display:table;
+      table-layout: fixed;
+      margin:0;
+      padding:0;
+      list-style: none;
+
+      @include media($tablet) {
+        width: 80%;
+        margin: 0 auto;
+      }
+      @include media($desktop) {
+        width: 60%;
+        margin: 0 auto;
+      }
+
+    }
+    li {
+      font-size: 0.8em;
+      text-align: center;
+      display:table-cell;
+      vertical-align: middle;
+      @include media($tablet) {
+        font-size: 1em;
+      }
+
+      a {
+        display:block;
+        height:100%;
+        font-family: Lato;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 1em 0;
+        word-wrap:break-word;
+        position:relative;
+        top:0;
+        transition: top 0.2s ease, color 0.2s ease;
+        border:none;
+        &:hover {
+          top: 2px;
+          color: lighten($navy, 30%);
+        }
+
+        @include media($desktop ) {
+          padding: 1.5em 0;
+        }
+      }
+    }
+  }
+}
+
+body.honeymoon {
+
+  #sub-hero h1 {
+    color:#fff;
+  }
+
+  .panel {
+
+    h3 {
+      text-align: center;
+    }
+
+    .location {
+      display:block;
+      text-transform: uppercase;
+      color: #777;
+      font-size: 0.8em;
+      padding-bottom: rem(10);
+      font-family: 'Arvo';
+      text-align: center;
+      position: relative;
+      top:-15px;
+    }
+
+    .attraction {
+
       margin-bottom:30px;
     }
 
@@ -398,12 +620,11 @@ body.guests {
       .attraction {
         margin-bottom:40px;
         @include span-columns(4);
-        @include pad(0 0);
+        @include pad(0 1em);
 
         &:nth-child(2n+2) {
           @include span-columns(4);
         }
-
         @include omega(3n);
 
       }
@@ -420,8 +641,19 @@ body.guests {
 
   }
 
-}
+  article.detail {
+    @include span-columns(12);
+    @include media($tablet) {
+      @include span-columns(8);
+      @include shift(2);
+    }
+    @include media($desktop) {
+      @include span-columns(6);
+      @include shift(3);
+    }
 
+  }
+}
 #scrollToTop {
   @include media($desktop) {
     display: none;
@@ -458,4 +690,5 @@ body.guests {
     }
   }
 }
+
 

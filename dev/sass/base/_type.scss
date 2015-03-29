@@ -1,7 +1,7 @@
 body {
   font-family: "Arvo", Georgia, Times, serif;
   letter-spacing: normal;
-  font-size: 0.8em;
+  //font-size: 0.8em;
   color: $navy;
 }
 
@@ -9,9 +9,16 @@ p, h1,h2,h3,h4,h5,h6 {
   transition: font-size 0.2s ease-in-out;
 }
 
-p { line-height: 1.7;
-    margin: 0 0 1em;    }
+p {
+  font-family: "Lato";
+  line-height: 1.7;
+  margin: 0 0 1em;
+}
 
+.fact {
+  font-family: "Libre Baskerville";
+  font-style: italic;
+}
 
 h1,h2,h3,h4,h5,h6 {
   font-family: "libre-caslon", 'Times', serif;
@@ -29,7 +36,7 @@ h2 {
   font-size: rem(20px);
 
   @include media($tablet) {
-      font-size: rem(40px);
+    font-size: rem(40px);
   }
 
   //font-family: 'Libre Baskerville';
@@ -41,7 +48,7 @@ h2 {
 
 h3, h4 {
   text-transform: uppercase;
-  letter-spacing: normal;
+  letter-spacing: 1px;
 }
 
 
@@ -61,4 +68,12 @@ address {
     padding-bottom: 10px;
     font-size: 0.8em;
   }
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0 0 2em;
 }
