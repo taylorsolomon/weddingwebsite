@@ -363,10 +363,10 @@ a {
     color: #fff;
     text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.3);
     z-index: 2; }
-  #hero .verse {
+  #hero .date, #hero .verse {
     position: absolute;
     display: table;
-    bottom: 5%;
+    bottom: 3%;
     text-align: center;
     width: 100%;
     left: 0;
@@ -377,15 +377,23 @@ a {
     font-family: "Libre Baskerville";
     font-style: italic;
     z-index: 1; }
-    #hero .verse span {
+    #hero .date span, #hero .verse span {
       font-size: 0.8em;
       transition: font-size 0.2s ease;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
     @media screen and (min-width: 568px)  {
-      #hero .verse {
+      #hero .date, #hero .verse {
         padding: 10px; }
-        #hero .verse span {
+        #hero .date span, #hero .verse span {
           font-size: 1em; } }
+  #hero .verse {
+    font-size: 0.9em; }
+  #hero .date {
+    bottom: 8%;
+    font-family: 'Lato';
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-style: normal; }
 
 #homepage-detail {
   background: #112442;
