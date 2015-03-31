@@ -687,14 +687,12 @@ body.about .menu-trigger a, body.party .menu-trigger a, body.honeymoon .menu-tri
         bottom: 20%; } }
 
 body.about #sub-hero {
-  background: url(../images/hero-about.jpg) no-repeat center center;
-  background-size: cover; }
+  background-image: url(../images/hero-about.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom; }
   body.about #sub-hero h1 {
     color: #fff; }
-  @media screen and (min-width: 568px)  {
-    body.about #sub-hero {
-      background: url(../images/hero-about.jpg) no-repeat;
-      background-size: cover; } }
 
 body.party #sub-hero {
   background: url(../images/test.png) center center;

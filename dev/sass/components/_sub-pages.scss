@@ -39,15 +39,17 @@
 }
 
 body.about #sub-hero {
-  background: url(../images/hero-about.jpg) no-repeat center center;
+  background-image: url(../images/hero-about.jpg);
+  background-repeat: no-repeat;
   background-size:cover;
+  background-position:bottom;
   h1 {
     color: #fff;
   }
   @include media($tablet) {
-    background: url(../images/hero-about.jpg) no-repeat ;
-    //background: url(../images/hero-about.jpg) no-repeat center -100px fixed ;
-    background-size:cover;
+    // background: url(../images/hero-about.jpg) no-repeat ;
+    // //background: url(../images/hero-about.jpg) no-repeat center -100px fixed ;
+    // background-size:cover;
   }
 
 }
