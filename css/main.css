@@ -838,19 +838,6 @@ body.registries article {
   text-align: center; }
   body.registries article:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 568px)  {
-    body.registries article {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%;
-      margin-left: 0%; }
-      body.registries article:last-child {
-        margin-right: 0; }
-      body.registries article:nth-child(2n) {
-        margin-right: 0; }
-      body.registries article:nth-child(2n+1) {
-        clear: left; } }
 
 #map-canvas {
   min-height: 250px;

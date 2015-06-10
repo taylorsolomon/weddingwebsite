@@ -227,11 +227,11 @@ body.registries {
     padding: 2em;
     text-align: center;
 
-    @include media($tablet) {
-      @include span-columns(6);
-      @include shift(0);
-      @include omega(2n);
-    }
+    // @include media($tablet) {
+    //   @include span-columns(6);
+    //   @include shift(0);
+    //   @include omega(2n);
+    // }
   }
 }
 
